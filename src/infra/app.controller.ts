@@ -13,7 +13,7 @@ export class AppController {
   }
   @Post()
   async create(@Body() body: CreateNotificationBody) {
-    const { recipientId, content, category } = body;
+    const { recipientId, category, content } = body;
 
     return this.prisma.notification.create({
       data: {
